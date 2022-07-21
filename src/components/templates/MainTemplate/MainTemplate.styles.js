@@ -5,7 +5,6 @@ import { device } from 'assets/styles/responsive';
 export const Wrapper = styled.div`
   position: relative;
   width: 100%;
-  height: 100vh;
   background-image: url(${background});
   background-color: ${({ theme }) => theme.colors.darkBlue};
 `;
