@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const MobileButton = styled.button`
   position: relative;
-  font-size: ${({ theme }) => theme.fontSize.s};
+  font-size: 11px;
   letter-spacing: 1.93px;
   text-transform: uppercase;
   font-weight: bold;

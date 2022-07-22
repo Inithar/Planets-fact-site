@@ -8,7 +8,7 @@ export const Container = styled.div`
 
 export const Wrapper = styled(Container)`
   width: 100%;
-  height: 12.5%;
+  height: 65px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   cursor: pointer;
 `;
@@ -22,8 +22,8 @@ export const ColorCircle = styled.div`
 
 export const PlanetName = styled.p`
   margin-left: 24px;
-  font-size: ${({ theme }) => theme.fontSize.l};
-  line-height: ${({ theme }) => theme.lineHeight.m};
+  font-size: 15px;
+  line-height: 36px;
   letter-spacing: 1.36px;
   text-transform: uppercase;
   font-weight: bold;

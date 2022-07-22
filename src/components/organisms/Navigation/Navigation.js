@@ -40,14 +40,14 @@ export const Navigation = () => {
         </MobileLinksContainer>
       ) : (
         <LinksContainer>
-          <StyledLink>mercury</StyledLink>
-          <StyledLink>venus</StyledLink>
-          <StyledLink>earth</StyledLink>
-          <StyledLink>mars</StyledLink>
-          <StyledLink>jupiter</StyledLink>
-          <StyledLink>saturn</StyledLink>
-          <StyledLink>uranus</StyledLink>
-          <StyledLink>neptune</StyledLink>
+          <StyledLink to="mercury">mercury</StyledLink>
+          <StyledLink to="venus">venus</StyledLink>
+          <StyledLink to="earth">earth</StyledLink>
+          <StyledLink to="mars">mars</StyledLink>
+          <StyledLink to="jupiter">jupiter</StyledLink>
+          <StyledLink to="saturn">saturn</StyledLink>
+          <StyledLink to="uranus">uranus</StyledLink>
+          <StyledLink to="neptune">neptune</StyledLink>
         </LinksContainer>
       )}
     </Wrapper>

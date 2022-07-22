@@ -11,7 +11,7 @@ export const theme = {
     purple: '#6F2ED6',
     red: '#D83A34',
     aquamarine: '#1Ec2A4',
-    blue: '#2D68F0',
+    blue: '#2D68F0'
   },
   planetsColor: {
     mercury: '#DEF4FC',
@@ -21,20 +21,6 @@ export const theme = {
     jupiter: '#ECAD7A',
     saturn: '#FCCB6B',
     uranus: '#65F0D5',
-    neptune: '#497EFA',
-  },
-  fontSize: {
-    xxxl: '80px',
-    xxl: '40px',
-    xl: '28px',
-    l: '15px',
-    m: '12px',
-    s: '11px',
-  },
-  lineHeight: {
-    xl: '103px',
-    l: '52px',
-    m: '36px',
-    s: '25px',
-  },
+    neptune: '#497EFA'
+  }
 };
