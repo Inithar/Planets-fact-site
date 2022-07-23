@@ -10,7 +10,6 @@ export const Navigation = () => {
     const updateWindowWidth = () => {
       const newWidth = window.innerWidth;
       newWidth >= 768 ? setIsMobile(false) : setIsMobile(true);
-      console.log('updating height');
     };
 
     updateWindowWidth();
