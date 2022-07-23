@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useLocation, useParams } from 'react-router-dom';
 
-export const StepContext = React.createContext({ step: 'overview', descriptionData: {}, changePlanetData: () => {} });
+export const StepContext = React.createContext({ descriptionData: {}, changeDescriptionData: () => {} });
 
 export const CurrentStepProvider = ({ children, planetData }) => {
+  const location = useLocation();
   const { name, overview, structure, geology, images } = planetData;
 
   const [descriptionData, setDescriptionData] = useState({
@@ -12,7 +14,7 @@ export const CurrentStepProvider = ({ children, planetData }) => {
     imageSrc: images.planet
   });
 
-  const changePlanetData = step => {
+  const changeDescriptionData = step => {
     switch (step) {
       case 'overview':
         setDescriptionData({
@@ -41,5 +43,9 @@ export const CurrentStepProvider = ({ children, planetData }) => {
     }
   };
 
-  return <StepContext.Provider value={{ step: 'overview', descriptionData, changePlanetData }}>{children}</StepContext.Provider>;
+  if (descriptionData.name !== location.pathname.substring(1)) {
+    changeDescriptionData('overview');
+  }
+
+  return <StepContext.Provider value={{ descriptionData, changeDescriptionData }}>{children}</StepContext.Provider>;
 };

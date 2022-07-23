@@ -5,9 +5,9 @@ import { StepContext } from 'providers/CurrentStepProvider';
 
 export const MobileButtonsSection = () => {
   const ctx = useContext(StepContext);
-  
+
   const handleClick = e => {
-    ctx.changePlanetData(e.target.value);
+    ctx.changeDescriptionData(e.target.value);
   };
 
   return (
