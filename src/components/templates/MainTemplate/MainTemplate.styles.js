@@ -20,7 +20,7 @@ export const Separator = styled.div`
     top: 159px;
   }
 
-  ${device.smallDesktop} {
+  ${device.bigTablet} {
     top: 85px;
   }
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from 'assets/styles/responsive';
 
 export const PlanetText = styled.p`
   margin-top: 16px;
@@ -8,4 +9,13 @@ export const PlanetText = styled.p`
   line-height: 25px;
   color: ${({ theme }) => theme.colors.white};
   opacity: 0.7;
+
+  ${device.tablet} {
+    padding-left: 0;
+    padding-right: 70px;
+  }
+
+  ${device.bigTablet} {
+    font-size: 14px;
+  }
 `;

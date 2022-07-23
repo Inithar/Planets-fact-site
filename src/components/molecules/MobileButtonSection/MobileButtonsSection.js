@@ -1,6 +1,6 @@
 import { MobileButton } from 'components/atoms/MobileButton/MobileButton';
 import { Wrapper } from 'components/molecules/MobileButtonSection/MobileButtonsSection.style';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext } from 'react';
 import { StepContext } from 'providers/CurrentStepProvider';
 
 export const MobileButtonsSection = () => {

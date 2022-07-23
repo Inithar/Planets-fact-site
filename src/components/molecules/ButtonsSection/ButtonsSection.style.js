@@ -2,10 +2,11 @@ import styled from 'styled-components';
 import { device } from 'assets/styles/responsive';
 
 export const Wrapper = styled.div`
-  padding: 28px 24px 47px;
+  display: flex;
+  flex-direction: column;
 
-  ${device.tablet} {
-    display: flex;
-    padding: 27px 39px;
+  ${device.bigTablet} {
+    width: 100%;
+    margin-top: 40px;
   }
 `;

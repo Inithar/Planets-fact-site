@@ -12,7 +12,7 @@ export const Wrapper = styled.div`
   color: ${({ theme }) => theme.colors.white};
   background-color: transparent;
 
-  ${device.smallDesktop} {
+  ${device.bigTablet} {
     display: flex;
   }
 `;
@@ -49,7 +49,7 @@ export const Container = styled.div`
   padding: 0 24px;
   height: ${mobileNavigationHeight};
 
-  ${device.smallDesktop} {
+  ${device.bigTablet} {
     padding-left: 32px;
     padding-right: 0;
   }
@@ -73,7 +73,7 @@ export const LinksContainer = styled.div`
   justify-content: center;
   margin: 34px 0 22px;
 
-  ${device.smallDesktop} {
+  ${device.bigTablet} {
     margin-left: auto;
     padding-right: 40px;
   }

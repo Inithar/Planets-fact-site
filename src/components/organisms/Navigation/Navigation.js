@@ -1,22 +1,11 @@
 import { MobileNavigationLink } from 'components/molecules/MobileNavigationLink.js/MobileNavigationLink';
 import React, { useEffect, useState } from 'react';
 import { Wrapper, Logo, BurgerIcon, Container, MobileLinksContainer, LinksContainer, StyledLink } from './Navigation.styles';
+import { useIsMobile } from 'hooks/useIsMobile';
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isMobile, setIsMobile] = useState();
-
-  useEffect(() => {
-    const updateWindowWidth = () => {
-      const newWidth = window.innerWidth;
-      newWidth >= 768 ? setIsMobile(false) : setIsMobile(true);
-    };
-
-    updateWindowWidth();
-    window.addEventListener('resize', updateWindowWidth);
-
-    return () => window.removeEventListener('resize', updateWindowWidth);
-  }, []);
+  const isMobile = useIsMobile();
 
   const handleToggleNavigation = () => setIsOpen(!isOpen);
 

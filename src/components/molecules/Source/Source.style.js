@@ -1,10 +1,15 @@
 import styled from 'styled-components';
 import sourceIcon from 'assets/icons/icon-source.svg';
+import { device } from 'assets/styles/responsive';
 
 export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${device.tablet} {
+    justify-content: left;
+  }
 `;
 
 export const StyledParagraph = styled.p`
@@ -12,7 +17,7 @@ export const StyledParagraph = styled.p`
   font-size: 15px;
   line-height: 52px;
   color: ${({ theme }) => theme.colors.white};
-  opacity: 0.7;
+  opacity: 0.5;
 `;
 
 export const StyledLink = styled.a.attrs(({ href }) => ({ href: href, target: '_blank' }))`
