@@ -107,7 +107,7 @@ export const StyledLink = styled(NavLink)`
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: ${({ theme }) => theme.colors.cyan};
+    background-color: ${({ theme, planet }) => theme.planetButtonColor[planet]};
     opacity: 0;
     transition: opacity 1s;
   }

@@ -6,6 +6,7 @@ export const StepContext = React.createContext({ buttonsState: {}, changeButtonS
 export const CurrentStepProvider = ({ children, planetData }) => {
   const location = useLocation();
   const { name, overview, structure, geology, images } = planetData;
+  const [step, setStep] = useState('overview');
 
   const [buttonsState, setButtonsState] = useState({
     overview: true,
@@ -34,6 +35,7 @@ export const CurrentStepProvider = ({ children, planetData }) => {
   };
 
   const changeDescriptionData = step => {
+    setStep(step);
     switch (step) {
       case 'overview':
         setDescriptionData({
@@ -56,7 +58,8 @@ export const CurrentStepProvider = ({ children, planetData }) => {
           name: name,
           content: geology.content,
           source: geology.source,
-          imageSrc: images.geology
+          imageSrc: images.planet,
+          geologyImg: images.geology
         });
         break;
     }
@@ -71,5 +74,5 @@ export const CurrentStepProvider = ({ children, planetData }) => {
     });
   }
 
-  return <StepContext.Provider value={{ buttonsState, changeButtonState, descriptionData, changeDescriptionData }}>{children}</StepContext.Provider>;
+  return <StepContext.Provider value={{ step, buttonsState, changeButtonState, descriptionData, changeDescriptionData }}>{children}</StepContext.Provider>;
 };

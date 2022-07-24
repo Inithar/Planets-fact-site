@@ -8,10 +8,11 @@ import { Container, Wrapper, PlanetImgContainer, DescriptionSection, InfoContain
 import { StepContext } from 'providers/CurrentStepProvider';
 import { useIsMobile } from 'hooks/useIsMobile';
 import { ButtonsSection } from 'components/molecules/ButtonsSection/ButtonsSection';
+import { GeologyImage } from 'components/atoms/GeologyImage/GeologyImage';
 
 export const PlanetDescription = () => {
-  const { descriptionData } = useContext(StepContext);
-  const { name, content, source, imageSrc } = descriptionData;
+  const { descriptionData, step } = useContext(StepContext);
+  const { name, content, source, imageSrc, geologyImg } = descriptionData;
   const isMobile = useIsMobile();
 
   return (
@@ -20,6 +21,7 @@ export const PlanetDescription = () => {
       <Container>
         <PlanetImgContainer>
           <PlanetImage src={imageSrc} />
+          {step === 'surface' ? <GeologyImage src={geologyImg} /> : null}
         </PlanetImgContainer>
         <DescriptionSection>
           <InfoContainer>

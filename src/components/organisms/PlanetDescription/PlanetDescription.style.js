@@ -4,6 +4,7 @@ import { device } from 'assets/styles/responsive';
 export const Wrapper = styled.div``;
 
 export const PlanetImgContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
