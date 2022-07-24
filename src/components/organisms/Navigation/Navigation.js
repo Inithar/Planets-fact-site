@@ -1,5 +1,5 @@
 import { MobileNavigationLink } from 'components/molecules/MobileNavigationLink.js/MobileNavigationLink';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { Wrapper, Logo, BurgerIcon, Container, MobileLinksContainer, LinksContainer, StyledLink } from './Navigation.styles';
 import { useIsMobile } from 'hooks/useIsMobile';
 

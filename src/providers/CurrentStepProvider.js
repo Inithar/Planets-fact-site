@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
 import { useLocation, useParams } from 'react-router-dom';
 
-export const StepContext = React.createContext({ descriptionData: {}, changeDescriptionData: () => {} });
+export const StepContext = React.createContext({ buttonsState: {}, changeButtonState: () => {}, descriptionData: {}, changeDescriptionData: () => {} });
 
 export const CurrentStepProvider = ({ children, planetData }) => {
   const location = useLocation();
   const { name, overview, structure, geology, images } = planetData;
+
+  const [buttonsState, setButtonsState] = useState({
+    overview: true,
+    structure: false,
+    surface: false
+  });
 
   const [descriptionData, setDescriptionData] = useState({
     name: name,
@@ -13,6 +19,19 @@ export const CurrentStepProvider = ({ children, planetData }) => {
     source: overview.source,
     imageSrc: images.planet
   });
+
+  const changeButtonState = e => {
+    setButtonsState(
+      Object.assign(
+        {
+          overview: false,
+          structure: false,
+          surface: false
+        },
+        { [e.target.value]: true }
+      )
+    );
+  };
 
   const changeDescriptionData = step => {
     switch (step) {
@@ -45,7 +64,12 @@ export const CurrentStepProvider = ({ children, planetData }) => {
 
   if (descriptionData.name !== location.pathname.substring(1)) {
     changeDescriptionData('overview');
+    setButtonsState({
+      overview: true,
+      structure: false,
+      surface: false
+    });
   }
 
-  return <StepContext.Provider value={{ descriptionData, changeDescriptionData }}>{children}</StepContext.Provider>;
+  return <StepContext.Provider value={{ buttonsState, changeButtonState, descriptionData, changeDescriptionData }}>{children}</StepContext.Provider>;
 };

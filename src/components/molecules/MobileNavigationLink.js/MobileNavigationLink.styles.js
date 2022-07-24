@@ -16,7 +16,7 @@ export const Wrapper = styled(Container)`
 export const ColorCircle = styled.div`
   width: 20px;
   height: 20px;
-  background-color: ${({ theme, ...props }) => theme.planetsColor[props.planet]};
+  background-color: ${({ theme, planet }) => theme.planetsColor[planet]};
   border-radius: 50%;
 `;
 
