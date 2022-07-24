@@ -4,21 +4,27 @@ import React, { useContext } from 'react';
 import { StepContext } from 'providers/CurrentStepProvider';
 
 export const MobileButtonsSection = () => {
-  const ctx = useContext(StepContext);
+  const {
+    buttonsState,
+    changeButtonState,
+    changeDescriptionData,
+    descriptionData: { name }
+  } = useContext(StepContext);
 
   const handleClick = e => {
-    ctx.changeDescriptionData(e.target.value);
+    changeButtonState(e);
+    changeDescriptionData(e.target.value);
   };
 
   return (
     <Wrapper>
-      <MobileButton onClick={handleClick} value="overview">
+      <MobileButton onClick={handleClick} value="overview" isActive={buttonsState.overview} planet={name} autoFocus>
         Overview
       </MobileButton>
-      <MobileButton onClick={handleClick} value="structure">
+      <MobileButton onClick={handleClick} value="structure" isActive={buttonsState.structure} planet={name}>
         Structure
       </MobileButton>
-      <MobileButton onClick={handleClick} value="surface">
+      <MobileButton onClick={handleClick} value="surface" isActive={buttonsState.surface} planet={name}>
         Surface
       </MobileButton>
     </Wrapper>

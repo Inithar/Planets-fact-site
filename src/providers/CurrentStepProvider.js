@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation, useParams } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 export const StepContext = React.createContext({ buttonsState: {}, changeButtonState: () => {}, descriptionData: {}, changeDescriptionData: () => {} });
 

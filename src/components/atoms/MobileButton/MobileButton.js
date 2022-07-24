@@ -8,7 +8,7 @@ export const MobileButton = styled.button`
   font-weight: bold;
   color: ${({ theme }) => theme.colors.white};
   background-color: transparent;
-  opacity: 50%;
+  opacity: ${({ isActive }) => (isActive ? '100%' : '50%')};
 
   &::before {
     content: '';
@@ -17,7 +17,15 @@ export const MobileButton = styled.button`
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: ${({ theme }) => theme.colors.cyan};
-    opacity: 0;
+    background-color: ${({ theme, planet, isActive }) => (isActive ? theme.planetButtonColor[planet] : 'transparent')};
+  }
+
+  &:focus::before {
+    background-color: ${({ theme, planet }) => theme.planetButtonColor[planet]};
+  }
+
+  &:focus {
+    color: ${({ theme }) => theme.colors.white};
+    opacity: 100%;
   }
 `;
