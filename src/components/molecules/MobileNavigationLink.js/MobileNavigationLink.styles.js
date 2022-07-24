@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import arrowIcon from 'assets/icons/arrow.svg';
+import { NavLink } from 'react-router-dom';
 
 export const Container = styled.div`
   display: flex;
@@ -33,4 +34,8 @@ export const PlanetName = styled.p`
 export const ArrowIcon = styled.img.attrs({ src: `${arrowIcon}` })`
   margin-left: auto;
   margin-right: 8px;
+`;
+
+export const StyledLink = styled(NavLink)`
+  text-decoration: none;
 `;

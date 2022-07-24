@@ -1,13 +1,12 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
-import { Wrapper, ColorCircle, PlanetName, ArrowIcon, Container } from './MobileNavigationLink.styles';
+import { Wrapper, ColorCircle, PlanetName, ArrowIcon, Container, StyledLink } from './MobileNavigationLink.styles';
 import { NavigationState } from 'providers/NavigationProvider';
 
 export const MobileNavigationLink = ({ planet }) => {
   const { handleToggleNavigation } = useContext(NavigationState);
 
   return (
-    <NavLink to={planet}>
+    <StyledLink to={planet}>
       <Wrapper onClick={handleToggleNavigation}>
         <Container>
           <ColorCircle planet={planet} />
@@ -15,6 +14,6 @@ export const MobileNavigationLink = ({ planet }) => {
         </Container>
         <ArrowIcon />
       </Wrapper>
-    </NavLink>
+    </StyledLink>
   );
 };
