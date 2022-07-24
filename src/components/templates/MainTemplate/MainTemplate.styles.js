@@ -5,8 +5,19 @@ import { device } from 'assets/styles/responsive';
 export const Wrapper = styled.div`
   position: relative;
   width: 100%;
+  min-height: 100vh;
   background-image: url(${background});
   background-color: ${({ theme }) => theme.colors.darkBlue};
+`;
+
+export const Content = styled.div`
+  ${device.bigTablet} {
+    padding: 200px 100px 30px;
+  }
+
+  ${device.desktop} {
+    padding: 212px 165px 56px;
+  }
 `;
 
 export const Separator = styled.div`

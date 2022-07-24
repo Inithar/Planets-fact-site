@@ -1,11 +1,11 @@
 import { Navigation } from 'components/organisms/Navigation/Navigation';
 import React from 'react';
-import { Separator, Wrapper } from './MainTemplate.styles';
+import { Content, Separator, Wrapper } from './MainTemplate.styles';
 
 export const MainTemplate = ({ children }) => (
   <Wrapper>
     <Navigation />
     <Separator />
-    {children}
+    <Content>{children}</Content>
   </Wrapper>
 );

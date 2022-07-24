@@ -8,4 +8,8 @@ export const Wrapper = styled.div`
     display: flex;
     padding: 27px 39px;
   }
+
+  ${device.bigTablet} {
+    padding: 67px 0;
+  }
 `;

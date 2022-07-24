@@ -16,6 +16,7 @@ export const PlanetText = styled.p`
   }
 
   ${device.bigTablet} {
+    padding-right: 0;
     font-size: 14px;
   }
 `;

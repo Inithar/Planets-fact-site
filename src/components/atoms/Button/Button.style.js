@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { device } from 'assets/styles/responsive';
 
 export const StyledButton = styled.button`
   margin-bottom: 16px;
@@ -15,6 +16,10 @@ export const StyledButton = styled.button`
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  ${device.bigTablet} {
+    width: 100%;
   }
 `;
 

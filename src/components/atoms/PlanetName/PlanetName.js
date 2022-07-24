@@ -10,6 +10,11 @@ export const PlanetName = styled.h1`
   color: ${({ theme }) => theme.colors.white};
 
   ${device.bigTablet} {
+    font-size: 60px;
+    line-height: 84px;
+  }
+
+  ${device.desktop} {
     font-size: 80px;
     line-height: 104px;
   }

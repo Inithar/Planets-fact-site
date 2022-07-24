@@ -14,6 +14,7 @@ export const PlanetImgContainer = styled.div`
   }
 
   ${device.bigTablet} {
+    padding: 120px 0 130px;
     width: 100%;
   }
 `;
@@ -21,7 +22,6 @@ export const PlanetImgContainer = styled.div`
 export const Container = styled.div`
   ${device.bigTablet} {
     display: flex;
-    margin-top: 210px;
   }
 `;
 
@@ -42,7 +42,12 @@ export const DescriptionSection = styled.div`
   }
 
   ${device.bigTablet} {
-    padding-right: 165px;
+    flex-direction: column;
+    padding-right: 0;
+    width: 70%;
+  }
+
+  ${device.desktop} {
     width: 50%;
   }
 `;

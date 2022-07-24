@@ -20,6 +20,14 @@ export const Wrapper = styled.div`
       margin-right: 0;
     }
   }
+
+  ${device.bigTablet} {
+    margin-right: 30px;
+  }
+
+  ${device.smallDesktop} {
+    padding: 27px 23px;
+  }
 `;
 
 export const DataName = styled.p`
@@ -31,7 +39,8 @@ export const DataName = styled.p`
   color: ${({ theme }) => theme.colors.white};
   opacity: 0.5;
 
-  ${device.tablet} {
+  ${device.smallDesktop} {
+    font-size: 12px;
   }
 `;
 
@@ -48,5 +57,10 @@ export const DataValue = styled.p`
   ${device.tablet} {
     margin-top: 10px;
     margin-left: 0;
+  }
+
+  ${device.smallDesktop} {
+    font-size: 30px;
+    line-height: 51px;
   }
 `;
